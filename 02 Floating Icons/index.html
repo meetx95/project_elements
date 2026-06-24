@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Floating Icons</title>
+</head>
+<body>
+  <center>   
+    <div class="icon" id="1"></div>
+  </center>
+</body>
+<style>
+body {
+  background: #121212;
+  align-content: center;
+}
+@keyframes float{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-20px); }
+}
+.icon{
+  background:#ff6c6c;
+  width: 100px;
+  height: 100px;
+  animation:float 4s ease-in-out infinite;
+}
+</style>
+</html>

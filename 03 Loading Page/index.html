@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Loading animation</title>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="loader">
+      <div class="loading one"></div>
+      <div class="loading two"></div>
+      <div class="loading three"></div>
+    </div>
+  </section>
+</body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  align-content: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh; 
+}
+.wrapper .loader {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;  
+}
+.loader .loading {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  margin: 0 10px;
+  animation: ani 0.8s ease-out infinite;
+}
+
+.loader .loading.one   { animation-delay: 0.3s; }
+.loader .loading.two   { animation-delay: 0.4s; }
+.loader .loading.three { animation-delay: 0.5s; }
+@keyframes ani {
+  0% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(10px); 
+  }
+}
+</style>
+</html>
